@@ -1,6 +1,7 @@
 package com.roldan.google.interfaces.jersey.resources;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -9,6 +10,7 @@ import javax.ws.rs.core.Response;
 import com.roldan.google.interfaces.guice.Service;
 
 @Path("helloworld")
+@Singleton
 public class HelloWorldResource {
 	public static final String CLICHED_MESSAGE = "Hello World!";
 

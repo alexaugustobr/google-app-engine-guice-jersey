@@ -13,10 +13,7 @@ public class MyApplication extends ResourceConfig {
 
     @Inject
     public MyApplication(ServiceLocator serviceLocator) {
-        packages("com.roldan.google.interfaces.jersey.resources");
-
         GuiceBridge.getGuiceBridge().initializeGuiceBridge(serviceLocator);
-
         GuiceIntoHK2Bridge guiceBridge = serviceLocator.getService(GuiceIntoHK2Bridge.class);
         guiceBridge.bridgeGuiceInjector(ApplicationServletContextListener.injector);
     }
