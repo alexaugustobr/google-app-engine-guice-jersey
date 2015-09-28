@@ -1,4 +1,4 @@
-package com.roldan.google.interfaces.jersey.resources;
+package com.roldan.google.interfaces.rest;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -7,7 +7,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
-import com.roldan.google.interfaces.guice.Service;
+import com.roldan.google.application.Service;
 
 @Path("helloworld")
 @Singleton
