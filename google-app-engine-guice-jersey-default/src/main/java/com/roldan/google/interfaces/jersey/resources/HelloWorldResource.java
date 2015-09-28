@@ -4,8 +4,8 @@ import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Response;
 
-import com.google.gson.Gson;
 import com.roldan.google.interfaces.guice.Service;
 
 @Path("helloworld")
@@ -17,9 +17,8 @@ public class HelloWorldResource {
 	
 	@GET
 	@Produces("application/json")
-	public String getHello() {
+	public Response getHello() {
 		Greeting greeting = new Greeting(service.getGreeting(), "Jorge");
-		Gson gson = new Gson();
-		return gson.toJson(greeting); 
+		return Response.status(Response.Status.OK).entity(greeting).build(); 
 	}
 }
