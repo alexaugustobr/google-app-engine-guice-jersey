@@ -12,7 +12,6 @@ import com.roldan.google.application.Service;
 @Path("helloworld")
 @Singleton
 public class HelloWorldResource {
-	public static final String CLICHED_MESSAGE = "Hello World!";
 
 	@Inject
 	private Service service;
